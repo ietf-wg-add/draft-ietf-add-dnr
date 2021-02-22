@@ -1,7 +1,7 @@
 ---
 title: "Discovery of Network provided Resolvers"
 abbrev: "DNR"
-docname: draft-ietf-add-dnr
+docname: draft-ietf-add-dnr-latest
 category: std
 
 ipr: trust200902
