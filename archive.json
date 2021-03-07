@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2021-03-04T00:00:49.662700+00:00",
+  "timestamp": "2021-03-07T00:00:54.303139+00:00",
   "repo": "ietf-wg-add/draft-ietf-add-dnr",
   "labels": [
     {
@@ -49,6 +49,66 @@
       "color": "d876e3"
     }
   ],
-  "issues": [],
-  "pulls": []
+  "issues": [
+    {
+      "number": 2,
+      "id": "MDU6SXNzdWU4MjM2MTI3OTE=",
+      "title": "Comments from Michael Richardson (Adoption Call)",
+      "url": "https://github.com/ietf-wg-add/draft-ietf-add-dnr/issues/2",
+      "state": "OPEN",
+      "author": "boucadair",
+      "authorAssociation": "NONE",
+      "assignees": [],
+      "labels": [],
+      "body": "```\r\nI found that section 3, Overview and Rationale was rather weak on both Overview and Rationale. It got very quickly into minutia of the implementation (such as when there is a list of addresses), so the reader unfamiliar with the situation gets lots very quickly.\r\n\r\nI suggest that the this section be broken into two (maybe three) major sections, the first is a more clear Overview, possibly followed immediately by the section 4,5,6,7 on the protocol elements themselves.\r\n\r\nThen, many of the paragraphs of section 3, would then appear in sections perhaps named: \"Architectural Challenges\", \"Client Implementation Considerations\", and \"Deployment Considerations\".\r\nMany of the elements from section 8 would go into these sections.\r\n\r\nI'm not sure why section 8 says that these are not \"recommendations\".\r\n(noting that \"RECOMMENDED\" is a BCP14 synonym for SHOULD) Perhaps the authors could explain why these are not SHOULDs?\r\n\r\nThere are a few really long sentences in the draft which maybe could be better understood as pseudo-code.\r\n\r\nI believe that 8.2, Unmananged CPE might reasonably be a section on its own.\r\n\r\nWRT the security considerations around spoofed messages.\r\n\r\nI think that this WG concluded back in early 2020 that we had to assume that the \"wire\" was trusted to the extent that DHCP/RA-Guard was either implemented, or if it was absent, that it was irrelevant.\r\ni.e. home users who run multiple DHCP servers or let attacking systems on\r\ntheir network know what they are doing.\r\n(Please note that the default configuration of OpenWRT actually filters DHCPv4/v6 messages out, so most people are actually in the former part of the clause) I'm not saying not the talk about spoofing, \r\nbut rather, I think that the text \"may be mitigated\" is just too weak a statement.\r\n```",
+      "createdAt": "2021-03-06T10:11:28Z",
+      "updatedAt": "2021-03-06T10:11:28Z",
+      "closedAt": null,
+      "comments": []
+    },
+    {
+      "number": 3,
+      "id": "MDU6SXNzdWU4MjM2MTI5MzQ=",
+      "title": "Comments from Ben Schwartz (call for adoption)",
+      "url": "https://github.com/ietf-wg-add/draft-ietf-add-dnr/issues/3",
+      "state": "OPEN",
+      "author": "boucadair",
+      "authorAssociation": "NONE",
+      "assignees": [],
+      "labels": [],
+      "body": "> I think this draft is solving the right problem, but I have some concerns about the actual content.  Most of the draft seems to concern the exact formats of how to deliver resolver information over DHCP/RA, and I think these formats should largely be rewritten to harmonize with DEER.\r\n> \r\n> Broadly, I see two paths forward:\r\n> \r\n> 1. Just include a domain name, and apply DEER's authenticated mode to establish a connection.  This avoids duplication of configuration, minimizes packet size, and reduces the risk of configuration skew in some cases.\r\n> 2. Adjust the DHCP/RA contents to be isomorphic to the information retrieved from DEER.  Ideally, the information from either one would be sufficient to populate the other, simplifying network setup, and the formats would match (e.g. reuse the relevant RDATA formats).",
+      "createdAt": "2021-03-06T10:12:19Z",
+      "updatedAt": "2021-03-06T10:12:19Z",
+      "closedAt": null,
+      "comments": []
+    }
+  ],
+  "pulls": [
+    {
+      "number": 1,
+      "id": "MDExOlB1bGxSZXF1ZXN0NTg1Njk5OTQw",
+      "title": "Create draft-ietf-add-dnr.ppt",
+      "url": "https://github.com/ietf-wg-add/draft-ietf-add-dnr/pull/1",
+      "state": "CLOSED",
+      "author": "boucadair",
+      "authorAssociation": "NONE",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2021-03-05T15:39:52Z",
+      "updatedAt": "2021-03-05T15:40:15Z",
+      "baseRepository": "ietf-wg-add/draft-ietf-add-dnr",
+      "baseRefName": "master",
+      "baseRefOid": "c33ab06259591c7671b10b03684f5f0b71ff2189",
+      "headRepository": "boucadair/draft-ietf-add-dnr",
+      "headRefName": "patch-1",
+      "headRefOid": "bd59f0ea9651263653f98801889f35ed8d5082bb",
+      "closedAt": "2021-03-05T15:40:15Z",
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
+      "reviews": []
+    }
+  ]
 }
