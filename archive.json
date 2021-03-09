@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2021-03-07T00:00:54.303139+00:00",
+  "timestamp": "2021-03-09T00:00:38.385618+00:00",
   "repo": "ietf-wg-add/draft-ietf-add-dnr",
   "labels": [
     {
@@ -79,6 +79,22 @@
       "body": "> I think this draft is solving the right problem, but I have some concerns about the actual content.  Most of the draft seems to concern the exact formats of how to deliver resolver information over DHCP/RA, and I think these formats should largely be rewritten to harmonize with DEER.\r\n> \r\n> Broadly, I see two paths forward:\r\n> \r\n> 1. Just include a domain name, and apply DEER's authenticated mode to establish a connection.  This avoids duplication of configuration, minimizes packet size, and reduces the risk of configuration skew in some cases.\r\n> 2. Adjust the DHCP/RA contents to be isomorphic to the information retrieved from DEER.  Ideally, the information from either one would be sufficient to populate the other, simplifying network setup, and the formats would match (e.g. reuse the relevant RDATA formats).",
       "createdAt": "2021-03-06T10:12:19Z",
       "updatedAt": "2021-03-06T10:12:19Z",
+      "closedAt": null,
+      "comments": []
+    },
+    {
+      "number": 4,
+      "id": "MDU6SXNzdWU4MjQzMDU2MjQ=",
+      "title": "Z.W. Yan Inputs",
+      "url": "https://github.com/ietf-wg-add/draft-ietf-add-dnr/issues/4",
+      "state": "OPEN",
+      "author": "boucadair",
+      "authorAssociation": "NONE",
+      "assignees": [],
+      "labels": [],
+      "body": "```\r\nHello, Dear Mohamed,\r\nI guess you are preparing to revise the draft after the IETF meeting.\r\nI currently have the following comments for your reference:\r\n1)    In page 7, \"For example, if the client requested DoH and DoT and the server supports both with the same ADN, then both T and H bits must be set. \". Here we want to compress the packet size and this is very important. I suggest to separately describe the recommendations in both DHCP and ICMP cases.\r\n2)    In page 11, the Figure 6 and Figure 7 can be deleted because their information contained is not so much.\r\n3)    In page 15, after \u201cLet's suppose that a host has discovered an encrypted DNS server that is DoH-capable.\u201d, an example is given. We need to emphasize the listed AND and Locator are just examples but not required formats.\r\nBR,\r\n________________________________________\r\nZ.W. Yan\r\n```\r\n",
+      "createdAt": "2021-03-08T08:17:18Z",
+      "updatedAt": "2021-03-08T08:17:18Z",
       "closedAt": null,
       "comments": []
     }
