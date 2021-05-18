@@ -6,6 +6,10 @@ This is the working area for the IETF [ADD Working Group](https://datatracker.ie
 * [Working Group Draft](https://tools.ietf.org/html/draft-ietf-add-dnr)
 * [Compare Editor's Copy to Working Group Draft](https://ietf-wg-add.github.io/draft-ietf-add-dnr/#go.draft-ietf-add-dnr.diff)
 
+# Old Repo for this draft
+
+https://github.com/boucadair/draft-btw-add-home-network 
+
 ## Building the Draft
 
 Formatted text and HTML versions of the draft can be built using `make`.
